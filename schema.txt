@@ -1,0 +1,48 @@
+TABLES:
+---------
+1. studenttbl
+2. classtbl
+3. teacherstbl
+4. batchtbl
+5. sessiontbl
+
+
+--------------------
+FIELDS:
+1.studenttbl
+   1.studentid PK
+   2.firstname
+   3.lastname
+   4.address
+   5.phonenumber
+   6.email
+   7.ssn
+   ng-view
+2. teachertbl
+   1.teacherid  PK
+   2.firstname
+   3.lastname
+   4.address
+   5.phonenumber
+   6.email
+
+3. classtbl
+   1.classid PK
+   2.title
+   3.classlimit  //total number of seats
+   4.description
+   
+4. sessiontbl
+   1. sessionid PK
+   2. startdate
+   3. enddate
+   4. starttime
+   5. classid FK //associated with classtbl
+   6. teacherid FK //associated with teachertbl
+   7. sessiontitle
+   
+5. batchtbl
+   1. batchid  PK
+   2. sessionid FK
+   3. studentid FK
+   

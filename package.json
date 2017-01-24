@@ -1,0 +1,27 @@
+{
+  "name": "uiprojects3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umeshpathak1234/uiprojects3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umeshpathak1234/uiprojects3/issues"
+  },
+  "homepage": "https://github.com/umeshpathak1234/uiprojects3#readme",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "body-parser": "^1.16.0",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "express-myconnection": "^1.0.4",
+    "mysql": "^2.12.0"
+  }
+}
