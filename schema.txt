@@ -45,4 +45,3 @@ FIELDS:
    1. batchid  PK
    2. sessionid FK
    3. studentid FK
-    yahi ho table haru sabai
