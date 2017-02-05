@@ -1,0 +1,48 @@
+<!doctype Html>
+<html ng-app="myapp">
+<head>
+    <title>angular ui routing</title>
+    <base href="/">
+    <link rel="stylesheet" href="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/style/flex.css">
+    </head>
+<body>
+   
+       <ul style="List-style-none" class="navigation">
+  <li><a ui-sref='studentForm'>Student</a></li>
+  <li><a ui-sref='classForm' >Class</a></li>
+  <li><a ui-sref='teacherForm' >Teacher</a></li>
+  <li><a ui-sref='batchForm' >Batch</a></li>
+  <li><a ui-sref='sessionForm'>Session</a></li>
+</ul>  
+
+    <div ui-view></div>
+
+  
+  
+    <script type="text/javascript" src="/node_modules/angular/angular.js">
+        </script>
+        <script type="text/javascript" src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+        <script type="text/javascript" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+        <script type="text/javascript" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+        <script type="text/javascript" src="/scripts/student.js"></script>
+    <script type="text/javascript" src="/scripts/Controllers/studentFormCntrlr.js"></script>
+    <script type="text/javascript" src="/scripts/service/personhttp.js"></script>
+    <script type="text/javascript" src="/scripts/Controllers/teacherForm.js">
+    </script>
+    <script type="text/javascript" src="/scripts/service/teacherHttp.js"></script>
+    <script type="text/javascript" src="/scripts/service/classHttp.js"></script>
+    <script type="text/javascript" src="/scripts/Controllers/classFormcontroller.js"></script>
+    <script type="text/javascript" src="/scripts/service/batchHttp.js">
+    </script>
+    <script type="text/javascript" src="/scripts/Controllers/batchFormcontroller.js">
+    </script>
+    <script type="text/javascript" src="/scripts/Controllers/sessionFormcontroller.js">
+    </script>
+    <script type="text/javascript" src="/scripts/service/sessionHttp.js">
+    </script>
+    </body>   
+        
+    
+</html>

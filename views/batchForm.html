@@ -1,0 +1,32 @@
+<div ng-controller="batchController">
+<form>
+    <div  class="container">
+        Session<select class="form-control" ng-model="formModels.sessionId">
+  <option ng-repeat="option in sessionList" value="{{option.sessionId}}" ng-selected="selectedSession">{{option.sessionTitle}}</option>
+</select>
+        Student<select class="form-control" ng-model="formModels.studentId" >
+  <option ng-repeat="option in studentlist" value="{{option.studentId}}" ng-selected="selectedStudent">{{option.firstName}}</option>
+</select>
+        <button type="button" class="btn btn-primary" ng-click=add()>Submit</button>
+        </div>
+</form>
+    
+<table class="table table-inverse">
+      <tr>
+        <th>BatchId</th>
+        <th>SessionId</th>
+        <th>StudentId</th>
+        </tr>
+    
+     <tbody  ng-repeat ="d in batchList">
+    <td>{{d.batchId}}</td>
+    <td>
+        {{d.sessionId}}</td>
+    <td>
+        {{d.studentId}}</td>
+     
+            <td>
+                <button class="btn btn-primary" ng-click="update(d.batchId)"><span class="glyphicon glyphicon-pencil"></span></button>
+                <button class= "btn btn-danger" ng-click="delete(d.batchId)"><span class="glyphicon glyphicon-trash"></span></button></td>
+    </tbody></table>
+</div>

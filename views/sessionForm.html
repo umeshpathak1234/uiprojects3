@@ -1,0 +1,57 @@
+ <div class="container"  ng-controller="sessionController">
+    <!-- Session ID<input type="number" ng-model="sessionId" class="form-control">-->
+        Start Date
+        <select ng-model="formModels.startDate" class="form-control">
+            <option value="01/16/2017">01/16/2017</option>
+            <option value="08/09/2017">08/09/2017</option>
+        </select>
+        End Date
+       <select ng-model="formModels.endDate" class="form-control">
+            <option value="05/03/2017">05/03/2017</option>
+            <option value="12/14/2017">12/14/2017</option>
+        </select>
+        Start Time
+     <select ng-model="formModels.startTime" class="form-control">
+            <option value="8:00 AM">8:00 AM</option>
+            <option value="1:07 PM">1:07 PM</option>
+        </select>
+        Class <select class="form-control" ng-model="formModels.classId" >
+  <option ng-repeat="option in classList" value="{{option.classId}}" ng-selected="selectedClass" >{{option.title}}</option>
+</select>
+            Teacher
+            <select class="form-control" ng-model="formModels.teacherId">
+                <option ng-repeat="option in teacherList" value="{{option.teacherId}}" ng-selected="selectedTeacher" >{{option.firstName}}</option>
+            </select>
+            
+            Session Title<select ng-model="formModels.sessionTitle" class="form-control">
+            <option value="Spring">Spring</option>
+            <option value="Fall">Fall</option>
+        </select>
+           <button type="button" class="btn btn-primary" ng-click=add()>Submit</button>
+        
+
+    
+<table class="table table-inverse">
+      <tr>
+        <th>SessionId</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+          <th>Start Time</th>
+          <th>Class Id</th>
+          <th>Teacher Id</th>
+          <th>Session Title</th>
+        </tr>
+    
+     <tbody  ng-repeat ="e in sessionList">
+        <td>{{e.sessionId}}</td>
+        <td>{{e.startDate}}</td>
+        <td>{{e.endDate}}</td>
+        <td>{{e.startTime}}</td>
+        <td>{{e.classId}}</td>
+        <td>{{e.firstName}}</td>
+        <td>{{e.sessionTitle}}</td>
+        <td>
+            <button class="btn btn-primary" ng-click="update(e.sessionId)"><span class="glyphicon glyphicon-pencil"></span></button>
+            <button class= "btn btn-danger" ng-click="delete(e.sessionId)"><span class="glyphicon glyphicon-trash"></span></button></td>
+    </tbody></table>
+</div>

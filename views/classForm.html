@@ -1,0 +1,28 @@
+<div class="container" ng-controller="classController"><p>
+       <!-- ClassId<input type="number" ng-model="formModels.classId" class="form-control">-->
+        Title<input type="text" ng-model="formModels.title" class="form-control">
+        ClassLimit<input type="text" ng-model="formModels.classLimit" class="form-control">
+        Description<input type="text" ng-model="formModels.description" class="form-control"></p>
+        <button type="button" class="btn btn-primary" ng-click=add()>Submit</button>
+    
+<table class="table table-inverse">
+      <tr>
+        <th>ClassId</th>
+        <th>Title</th>
+        <th>ClassLimit</th>
+        <th>Description</th>
+        <th></th></tr>
+    
+     <tbody  ng-repeat ="c in classList">
+    <td>{{c.classId}}</td>
+    <td>
+        {{c.title}}</td>
+    <td>
+        {{c.classLimit}}</td>
+             <td>
+        {{c.description}}</td>
+            <td>
+                <button class="btn btn-primary" ng-click="update(c.classId)"><span class="glyphicon glyphicon-pencil"></span></button>
+                <button class= "btn btn-danger" ng-click="delete(c.classId)"><span class="glyphicon glyphicon-trash"></span></button></td>
+    </tbody></table>
+</div>
