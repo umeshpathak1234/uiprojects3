@@ -17,8 +17,7 @@ FIELDS:
    5.phonenumber
    6.email
    7.ssn
-   pakha hai 
-   ng-view
+
 2. teachertbl
    1.teacherid  PK
    2.firstname
